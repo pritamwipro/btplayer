@@ -9,14 +9,14 @@ fi
 
 cd "${btplayerdir}" || { printf "cd failed, exiting\n" >&2;  return 1; }
 
-gitsource="https://gitlab.tools.btcsp.co.uk/tv/youview-btplayer.git"
+youview="https://github.com/pritamwipro/kth.git"
 
-printf "Gitsource: "
-read -r gitsource
+# printf "Gitsource: "
+# read -r gitsource
 
-git clone "${gitsource}"
+git clone "${youview}"
 
-unset gitsource
+# unset gitsource
 
 echo "Please choose from the options bellow"
 
