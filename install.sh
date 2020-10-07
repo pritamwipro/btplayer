@@ -20,7 +20,6 @@ files="private"
 
 # change to the btplayerfiles directory
 echo "Changing to the ${btplayerdir} directory"
-mkdir ${btplayerdir}
 cd ${btplayerdir}
 echo "...done"
 
