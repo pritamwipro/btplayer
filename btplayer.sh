@@ -14,3 +14,15 @@ youview_btplayer="https://gitlab.tools.btcsp.co.uk/tv/youview-btplayer.git"
 
 git clone "${inlife_puppet}"
 git clone "${youview_btplayer}"
+
+cd "${btplayerdir}"/inlife_puppet
+
+./doGitPullAll.sh
+
+cd ../youview-btplayer
+
+git submodule init
+
+git submodule update
+
+
