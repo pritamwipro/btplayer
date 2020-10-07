@@ -1,8 +1,9 @@
 #!/usr/bin/env bash
 
 # Install Brew Packages
-brew install git
 brew install node
+brew install git
+brew install bash-completion
 brew install tree
 
 # Install MacOS Applications
@@ -10,6 +11,7 @@ brew cask install google-chrome
 brew cask install firefox
 brew cask install visual-studio-code
 brew cask install virtualbox
+brew cask install docker
 brew cask install vagrant
 brew cask install skype
 

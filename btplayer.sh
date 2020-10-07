@@ -9,8 +9,17 @@ fi
 
 cd "${btplayerdir}" || { printf "cd failed, exiting\n" >&2;  return 1; }
 
-youview_btplayer="https://github.com/pritamwipro/kth.git"
-youview_btplayer2="https://gitlab.tools.btcsp.co.uk/tv/youview-btplayer.git"
+youview_btplayer="https://gitlab.tools.btcsp.co.uk/tv/inlife_puppet.git"
+inlife_puppet="https://gitlab.tools.btcsp.co.uk/tv/youview-btplayer.git"
+
+echo "Youview Btplayer cloning in progress..."
 
 git clone "${youview_btplayer}"
-git clone "${youview_btplayer2}"
+
+echo "Youview Btplayer cloning completed"
+
+echo "inlife puppet cloning in progress..."
+
+git clone "${inlife_puppet}"
+
+echo "Inlife Puppet cloning completed"
