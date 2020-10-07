@@ -2,7 +2,7 @@
 
 # Install Brew Packages
 brew install node
-brew install git
+brew install git || fallback_command
 brew install bash-completion
 brew install tree
 
@@ -19,3 +19,6 @@ brew cask install skype
 # brew tap homebrew/cask-fonts
 # brew cask install font-source-code-pro
 
+fallback_command() {
+    echo "Already installed! Deep what are you doing man!!!"
+}
