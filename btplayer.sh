@@ -1,4 +1,5 @@
 #!/usr/bin/env bash
+echo "NEW to the ${btplayerdir} directory"
 
 if [ ! -d "$btplayerdir" ]; then
     mkdir "$btplayerdir"
