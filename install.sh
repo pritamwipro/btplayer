@@ -37,4 +37,4 @@ curl "https://raw.githubusercontent.com/git/git/master/contrib/completion/git-co
 # ./brew.sh
 
 # Run the BT Player Script
-./btplayer.sh
+./btplayer.sh ${btplayerdir}
