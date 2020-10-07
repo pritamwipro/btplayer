@@ -13,13 +13,14 @@ fi
 homedir=$1
 
 # btplayerfiles directory
-btplayerdir=${homedir}/btplayerfiles
+btplayerdir=${homedir}/btplayer
 
 # list of files/folders to symlink in ${homedir}
 files="private"
 
 # change to the btplayerfiles directory
 echo "Changing to the ${btplayerdir} directory"
+mkdir -p ${btplayerdir}
 cd ${btplayerdir}
 echo "...done"
 

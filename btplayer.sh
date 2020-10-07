@@ -1,32 +1,30 @@
 #!/usr/bin/env bash
 
-# this script clones a repository, including all its remote branches
-# Author: Deeptanu Sarkar & Pritam Ghosh
-
-GIT=`which git`
-
-if [ "x$1" = "x"];then
-  echo "use: <home_directory>"
-  exit 1
+if [ ! -d "$HOME"/git-sources ]; then
+    mkdir "$HOME"/git-sources
 fi
 
-if [ "x$GIT" = "x" ];then
-  echo "No git command found. install it"
+cd "$HOME"/git-sources || { printf "cd failed, exiting\n" >&2;  return 1; }
+
+printf "Gitsource: "
+read -r gitsource
+
+git clone "$gitsource"
+
+unset gitsource
+
+echo "Please choose from the options bellow"
+
+echo "1) Go back to your working directory"
+echo "2) Go to the 'git-sources' folder"
+
+read -r ans
+back="1"
+stay="2"
+if [ "$ans" = "$back" ]; then
+      cd - || { printf "cd failed, exiting\n" >&2; unset ans; return 1; }
+elif [ "$ans" = "$stay" ]; then
+      cd "$HOME"/git-sources || { printf "cd failed, exiting\n" >&2; unset ans; return 1; }
 fi
 
-function clone {
-
-  $GIT clone -q $1 $2
-  res=$?
-
-  cd $2
-
-  $GIT pull --all
-
-  for remote in `$GIT branch -r | grep -v \>`; do
-     $GIT branch --track ${remote#origin/} $remote;
-  done
-}
-
-echo "cloning repository into ... ${btplayerdir}"
-clone "https://gitlab.tools.btcsp.co.uk/tv/youview-btplayer.git" ${btplayerdir}
+unset ans
