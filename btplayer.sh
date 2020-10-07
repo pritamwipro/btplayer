@@ -1,3 +1,5 @@
+#!/usr/bin/env bash
+
 # this script clones a repository, including all its remote branches
 # Author: Deeptanu Sarkar & Pritam Ghosh
 
