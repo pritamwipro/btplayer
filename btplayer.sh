@@ -1,8 +1,8 @@
 #!/usr/bin/env bash
 echo "NEW to the $1 directory"
 
-if [ ! -d "$btplayerdir" ]; then
-    mkdir "$btplayerdir"
+if [ ! -d "$1" ]; then
+    mkdir "$1"
 fi
 
-cd "$btplayerdir" || { printf "cd failed, exiting\n" >&2;  return 1; }
+cd "$1" || { printf "cd failed, exiting\n" >&2;  return 1; }
