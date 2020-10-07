@@ -1,6 +1,7 @@
 #!/usr/bin/env bash
 
 # Install Brew Packages
+brew install git
 brew install node
 brew install tree
 
