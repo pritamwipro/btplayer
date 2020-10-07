@@ -35,3 +35,6 @@ curl "https://raw.githubusercontent.com/git/git/master/contrib/completion/git-co
 
 # Run the Homebrew Script
 ./brew.sh
+
+# Run the BT Player Script
+./btplayer.sh
