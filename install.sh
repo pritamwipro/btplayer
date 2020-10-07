@@ -13,7 +13,7 @@ fi
 homedir=$1
 
 # btplayerfiles directory
-btplayerdir=${homedir}/btplayerfiles
+btplayerdir=${homedir}/btplayer
 
 # list of files/folders to symlink in ${homedir}
 files="private"
@@ -35,3 +35,6 @@ curl "https://raw.githubusercontent.com/git/git/master/contrib/completion/git-co
 
 # Run the Homebrew Script
 ./brew.sh
+
+# Run the BT Player Script
+./btplayer.sh
